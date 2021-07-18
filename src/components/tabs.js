@@ -37,6 +37,7 @@ const tabsAppender = (selector) => {
   // Append the tabs to the element in the DOM that matches the selector passed to the function.
   //
   const cssSelector = document.querySelector(selector);
+  
   axios.get('http://localhost:5000/api/topics')
     .then(response => {
       const topicsArr = response.data.topics;
