@@ -65,9 +65,8 @@ const cardAppender = (selector) => {
   axios.get('http://localhost:5000/api/articles')
     .then(response => {
       const articlesObj = response.data.articles;
-      const articlesArr = Object.values(articlesObj);
-      const articlesArrFlat = articlesArr.flat();
-      articlesArrFlat.forEach(article => {
+      const articlesArr = Object.values(articlesObj).flat();
+      articlesArr.forEach(article => {
         const card = Card(article);
         cssSelector.appendChild(card);
       })
