@@ -10,3 +10,5 @@ tabsAppender('.tabs-container')
 cardAppender('.cards-container')
 
 console.log('Lambda Times loaded!')
+
+const name = 'Tony';
